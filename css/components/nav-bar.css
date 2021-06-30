@@ -1,0 +1,43 @@
+/* 맨 아랫줄 고정 */
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: #2e363e;
+  /* -1-을 위한 포지션 */
+  position: relative;
+}
+
+.nav__notification {
+  background-color: tomato;
+
+  /* span은 높이 넓이를 가질 수 없음. 블락으로 변경 */
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  /* width의 절반이면 원으로 표현. border-radius */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+
+  /* -1-layer를 달리해서 겹치게 하기 */
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+}

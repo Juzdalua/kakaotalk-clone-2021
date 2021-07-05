@@ -1,0 +1,36 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  padding-top: 50px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alt-header__column {
+  width: 33%;
+}
+
+.alt-header__title {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* 글자수에 따라 중앙정렬이 안될수있음 -> space-between 대신 margin auto*/
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}
+
+.alt-header__column:last-child {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column span:last-child {
+  margin-left: 20px;
+}

@@ -105,3 +105,25 @@
 .open-post_heart-count span {
   margin-left: 5px;
 }
+
+@keyframes heartBeat {
+  0% {
+    transform: none;
+    color: white;
+  }
+  50% {
+    transform: scale(1.5);
+    color: tomato;
+  }
+  100% {
+    transform: none;
+    color: white;
+  }
+}
+
+.open-post_heart-count:hover i {
+  /* 애니메이션을 부드럽게 해주는 will-change */
+  /* 항상 사용하지 않는다. 부자연스러운 경우에만. */
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}

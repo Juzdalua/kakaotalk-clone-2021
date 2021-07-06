@@ -29,3 +29,34 @@
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* html은 js로 지워야한다. 
+    엘리먼트는 남아있지만 하단 레이어 클릭이 가능함 */
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+
+  /* 가장 위에 표시하기위해 body를 rel */
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+
+  /* forwards는 마지막 애니메이션을 지속한다. */
+  animation: hideSplashScreen 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
